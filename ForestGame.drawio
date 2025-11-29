@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
+  <diagram name="Page-1" id="bD12b9ou7C18OPihxY6S">
+    <mxGraphModel dx="1601" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="TileType" vertex="1">
+          <mxGeometry height="30" width="230" x="10" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;GROUND&lt;/div&gt;&lt;div&gt;TREE&lt;/div&gt;&lt;div&gt;ROCK&lt;/div&gt;&lt;div&gt;BUSH&lt;/div&gt;&lt;div&gt;CAMPFIRE&lt;/div&gt;&lt;div&gt;MUSHROOM&lt;/div&gt;&lt;div&gt;SPEED_POWERUP&lt;/div&gt;&lt;div&gt;INVIS_POWERUP&lt;/div&gt;&lt;div&gt;EXTRA_LIFE&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="230" x="10" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ isBlockingForPlayer(): boolean&lt;/div&gt;&lt;div&gt;+ isBlockingForWolf(): boolean&lt;/div&gt;&lt;div&gt;+ isMushroom(): boolean&lt;/div&gt;&lt;div&gt;+ isPowerUp(): boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="230" x="10" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Direction" vertex="1">
+          <mxGeometry height="30" width="230" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;UP&lt;/div&gt;&lt;div&gt;DOWN&lt;/div&gt;&lt;div&gt;LEFT&lt;/div&gt;&lt;div&gt;RIGHT&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="230" x="280" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- dRow: int&lt;/div&gt;&lt;div&gt;- dCol: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Player" vertex="1">
+          <mxGeometry height="30" width="230" x="540" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- MAX_LIVES: int&lt;/div&gt;&lt;div&gt;- row: int&lt;/div&gt;&lt;div&gt;- col: int&lt;/div&gt;&lt;div&gt;- lives: int&lt;/div&gt;&lt;div&gt;- mushroomsCollected: int&lt;/div&gt;&lt;div&gt;- speedActive: boolean&lt;/div&gt;&lt;div&gt;- invisActive: boolean&lt;/div&gt;&lt;div&gt;- speedExpiresAtSecond: int&lt;/div&gt;&lt;div&gt;- invisExpiresAtSecond: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="230" x="540" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ Player(startRow: int, startCol: int)&lt;/div&gt;&lt;div&gt;+ moveBy(dRow: int, dCol: int, map: GameMap): boolean&lt;/div&gt;&lt;div&gt;+ respawn(spawnRow: int, spawnCol: int): void&lt;/div&gt;&lt;div&gt;+ getRow(): int&lt;/div&gt;&lt;div&gt;+ setRow(row: int): void&lt;/div&gt;&lt;div&gt;+ getCol(): int&lt;/div&gt;&lt;div&gt;+ setCol(col: int): void&lt;/div&gt;&lt;div&gt;+ getLives(): int&lt;/div&gt;&lt;div&gt;+ decrementLives(): void&lt;/div&gt;&lt;div&gt;+ incrementLives(): void&lt;/div&gt;&lt;div&gt;+ getMushroomsCollected(): int&lt;/div&gt;&lt;div&gt;+ incrementMushroomsCollected(): void&lt;/div&gt;&lt;div&gt;+ isSpeedActive(): boolean&lt;/div&gt;&lt;div&gt;+ activateSpeed(currentSecond: int, durationSeconds: int): void&lt;/div&gt;&lt;div&gt;+ deactivateSpeed(): void&lt;/div&gt;&lt;div&gt;+ getSpeedExpiresAtSecond(): int&lt;/div&gt;&lt;div&gt;+ isInvisActive(): boolean&lt;/div&gt;&lt;div&gt;+ activateInvisibility(currentSecond: int, durationSeconds: int): void&lt;/div&gt;&lt;div&gt;+ deactivateInvisibility(): void&lt;/div&gt;&lt;div&gt;+ getInvisExpiresAtSecond(): int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="360" width="230" x="540" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Wolf" vertex="1">
+          <mxGeometry height="30" width="270" x="550" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- row: int&lt;/div&gt;&lt;div&gt;- col: int&lt;/div&gt;&lt;div&gt;- direction: Direction&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="270" x="550" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ Wolf(startRow: int, startCol: int)&lt;/div&gt;&lt;div&gt;+ getRow(): int&lt;/div&gt;&lt;div&gt;+ setRow(row: int): void&lt;/div&gt;&lt;div&gt;+ getCol(): int&lt;/div&gt;&lt;div&gt;+ setCol(col: int): void&lt;/div&gt;&lt;div&gt;+ getDirection(): Direction&lt;/div&gt;&lt;div&gt;+ setDirection(dir: Direction): void&lt;/div&gt;&lt;div&gt;+ update(map: GameMap, rand: Random): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="270" x="550" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GameMap" vertex="1">
+          <mxGeometry height="30" width="270" x="10" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- tiles: TileType[][]&lt;/div&gt;&lt;div&gt;- rows: int&lt;/div&gt;&lt;div&gt;- cols: int&lt;/div&gt;&lt;div&gt;- campfireRow: int&lt;/div&gt;&lt;div&gt;- campfireCol: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="270" x="10" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ GameMap(tiles: TileType[][], campfireRow: int, campfireCol: int)&lt;/div&gt;&lt;div&gt;+ getRows(): int&lt;/div&gt;&lt;div&gt;+ getCols(): int&lt;/div&gt;&lt;div&gt;+ getTile(row: int, col: int): TileType&lt;/div&gt;&lt;div&gt;+ setTile(row: int, col: int, type: TileType): void&lt;/div&gt;&lt;div&gt;+ getCampfireRow(): int&lt;/div&gt;&lt;div&gt;+ getCampfireCol(): int&lt;/div&gt;&lt;div&gt;+ isInside(row: int, col: int): boolean&lt;/div&gt;&lt;div&gt;+ isWalkableForPlayer(row: int, col: int): boolean&lt;/div&gt;&lt;div&gt;+ isWalkableForWolf(row: int, col: int): boolean&lt;/div&gt;&lt;div&gt;+ hasAnyMushrooms(): boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="270" x="10" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GameState" vertex="1">
+          <mxGeometry height="30" width="230" x="299" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- map: GameMap&lt;/div&gt;&lt;div&gt;- player: Player&lt;/div&gt;&lt;div&gt;- wolves: List&amp;lt;Wolf&amp;gt;&lt;/div&gt;&lt;div&gt;- levelName: String&lt;/div&gt;&lt;div&gt;- playerName: String&lt;/div&gt;&lt;div&gt;- elapsedSeconds: int&lt;/div&gt;&lt;div&gt;- wolfLastMoveSecond: int&lt;/div&gt;&lt;div&gt;- gameOver: boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="230" x="299" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ GameState(loaded: LoadedLevel)&lt;/div&gt;&lt;div&gt;+ getMap(): GameMap&lt;/div&gt;&lt;div&gt;+ getPlayer(): Player&lt;/div&gt;&lt;div&gt;+ getWolves(): List&amp;lt;Wolf&amp;gt;&lt;/div&gt;&lt;div&gt;+ getLevelName(): String&lt;/div&gt;&lt;div&gt;+ getPlayerName(): String&lt;/div&gt;&lt;div&gt;+ setPlayerName(name: String): void&lt;/div&gt;&lt;div&gt;+ getElapsedSeconds(): int&lt;/div&gt;&lt;div&gt;+ incrementElapsedSeconds(): void&lt;/div&gt;&lt;div&gt;+ resetElapsedSeconds(): void&lt;/div&gt;&lt;div&gt;+ getWolfLastMoveSecond(): int&lt;/div&gt;&lt;div&gt;+ setWolfLastMoveSecond(sec: int): void&lt;/div&gt;&lt;div&gt;+ isGameOver(): boolean&lt;/div&gt;&lt;div&gt;+ setGameOver(over: boolean): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="230" x="299" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LoadedLevel" vertex="1">
+          <mxGeometry height="30" width="230" x="790" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- map: GameMap&lt;/div&gt;&lt;div&gt;- player: Player&lt;/div&gt;&lt;div&gt;- wolves: List&amp;lt;Wolf&amp;gt;&lt;/div&gt;&lt;div&gt;- levelName: String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="230" x="790" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ LoadedLevel(map: GameMap, player: Player, wolves: List&amp;lt;Wolf&amp;gt;, levelName: String)&lt;/div&gt;&lt;div&gt;+ getMap(): GameMap&lt;/div&gt;&lt;div&gt;+ getPlayer(): Player&lt;/div&gt;&lt;div&gt;+ getWolves(): List&amp;lt;Wolf&amp;gt;&lt;/div&gt;&lt;div&gt;+ getLevelName(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="230" x="790" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LoadedLevel" vertex="1">
+          <mxGeometry height="30" width="230" x="10" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- ROWS: int&lt;/div&gt;&lt;div&gt;- COLS: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="230" x="10" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ loadFromFile(path: String): LoadedLevel&lt;/div&gt;&lt;div&gt;+ extractLevelName(path: String): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="230" x="10" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="HighscoreEntry" vertex="1">
+          <mxGeometry height="30" width="230" x="790" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- playerName: String&lt;/div&gt;&lt;div&gt;- levelName: String&lt;/div&gt;&lt;div&gt;- mushrooms: int&lt;/div&gt;&lt;div&gt;- timeSeconds: int&lt;/div&gt;&lt;div&gt;- createdAt: String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="790" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ HighscoreEntry(name: String, level: String, mushrooms: int, time: int, createdAt: String)&lt;/div&gt;&lt;div&gt;+ getPlayerName(): String&lt;/div&gt;&lt;div&gt;+ getLevelName(): String&lt;/div&gt;&lt;div&gt;+ getMushrooms(): int&lt;/div&gt;&lt;div&gt;+ getTimeSeconds(): int&lt;/div&gt;&lt;div&gt;+ getCreatedAt(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="230" x="790" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="HighscoreDatabase" vertex="1">
+          <mxGeometry height="30" width="230" x="290" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="- DB_URL: String" vertex="1">
+          <mxGeometry height="30" width="230" x="290" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ saveScore(playerName: String, levelName: String, mushrooms: int, timeSeconds: int): void&lt;/div&gt;&lt;div&gt;+ loadTopScores(levelName: String, limit: int): List&amp;lt;HighscoreEntry&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="290" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GamePanel" vertex="1">
+          <mxGeometry height="30" width="230" x="1030" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;- TILE_SIZE: int&lt;/div&gt;&lt;div&gt;- GRID_SIZE: int&lt;/div&gt;&lt;div&gt;- HUD_HEIGHT: int&lt;/div&gt;&lt;div&gt;- PANEL_WIDTH: int&lt;/div&gt;&lt;div&gt;- PANEL_HEIGHT: int&lt;/div&gt;&lt;div&gt;- TIMER_DELAY_MS: int&lt;/div&gt;&lt;div&gt;- POWERUP_DURATION_SECONDS: int&lt;/div&gt;&lt;div&gt;- gameState: GameState&lt;/div&gt;&lt;div&gt;- gameTimer: Timer&lt;/div&gt;&lt;div&gt;- random: Random&lt;/div&gt;&lt;div&gt;- currentLevelPath: String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="230" x="1030" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;+ GamePanel()&lt;/div&gt;&lt;div&gt;+ setCurrentLevelPath(path: String): void&lt;/div&gt;&lt;div&gt;+ startGame(): void&lt;/div&gt;&lt;div&gt;+ startNewGame(path: String, playerName: String): void&lt;/div&gt;&lt;div&gt;+ handlePlayerMove(dr: int, dc: int): void&lt;/div&gt;&lt;div&gt;+ updateWindowTitle(): void&lt;/div&gt;&lt;div&gt;+ updatePowerUps(): void&lt;/div&gt;&lt;div&gt;+ updateWolfMovement(): void&lt;/div&gt;&lt;div&gt;+ checkWolfCollision(): void&lt;/div&gt;&lt;div&gt;+ handleGameOver(): void&lt;/div&gt;&lt;div&gt;+ restartTimer(): void&lt;/div&gt;&lt;div&gt;+ setupKeyBindings(): void&lt;/div&gt;&lt;div&gt;+ paintComponent(g: Graphics): void&lt;/div&gt;&lt;div&gt;+ isTileVisible(r: int, c: int, p: Player): boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="230" x="1030" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="TileType" vertex="1">
+          <mxGeometry height="30" width="230" x="120" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Direction" vertex="1">
+          <mxGeometry height="30" width="230" x="110" y="1920" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GameMap" vertex="1">
+          <mxGeometry height="30" width="270" x="590" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LoadedLevel" vertex="1">
+          <mxGeometry height="30" width="230" x="1020" y="1840" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GameState" vertex="1">
+          <mxGeometry height="30" width="230" x="690" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-62" edge="1" parent="1" source="bvkSPF_aGjMEAsJYthEg-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="HighscoreEntry" vertex="1">
+          <mxGeometry height="30" width="230" x="140" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-50" edge="1" parent="1" source="bvkSPF_aGjMEAsJYthEg-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Player" vertex="1">
+          <mxGeometry height="30" width="230" x="1030" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="HighscoreDatabase" vertex="1">
+          <mxGeometry height="30" width="230" x="430" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GamePanel" vertex="1">
+          <mxGeometry height="30" width="230" x="1050" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LoadedLevel" vertex="1">
+          <mxGeometry height="30" width="230" x="1360" y="1840" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Wolf" vertex="1">
+          <mxGeometry height="30" width="270" x="580" y="1920" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-48" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="1934.23" as="sourcePoint" />
+            <mxPoint x="580" y="1934.23" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-52" edge="1" parent="1" source="bvkSPF_aGjMEAsJYthEg-38" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="bvkSPF_aGjMEAsJYthEg-35" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="590" y="1630" as="sourcePoint" />
+            <mxPoint x="370" y="1630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-53" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-46" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1012.33" y="1870" as="sourcePoint" />
+            <mxPoint x="1010.0000000000001" y="1990.2999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-54" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-42" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1132.5" y="1840" as="sourcePoint" />
+            <mxPoint x="1350" y="1960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-56" edge="1" parent="1" source="bvkSPF_aGjMEAsJYthEg-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.461;entryY=0.872;entryDx=0;entryDy=0;entryPerimeter=0;" target="bvkSPF_aGjMEAsJYthEg-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-57" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.889;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="bvkSPF_aGjMEAsJYthEg-38" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1020" y="1840" as="sourcePoint" />
+            <mxPoint x="1180" y="1840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-58" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.675;entryY=-0.031;entryDx=0;entryDy=0;entryPerimeter=0;" target="bvkSPF_aGjMEAsJYthEg-38" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="780" y="1470" as="sourcePoint" />
+            <mxPoint x="940" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-59" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-42" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="920" y="1470" as="sourcePoint" />
+            <mxPoint x="1080" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-61" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-39" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1360" y="1850" as="sourcePoint" />
+            <mxPoint x="1520" y="1850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bvkSPF_aGjMEAsJYthEg-64" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="bvkSPF_aGjMEAsJYthEg-40" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1050" y="1460" as="sourcePoint" />
+            <mxPoint x="1210" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
